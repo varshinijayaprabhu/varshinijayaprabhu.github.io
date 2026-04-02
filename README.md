@@ -1,3 +1,5 @@
+<!-- latest update -->
+
 # Portfolio - Varshini Jayaprabhu
 
 Modern, high-performance portfolio website for a GeoAI Full Stack Developer built with React and Vite.
@@ -19,6 +21,7 @@ Deployed using Vercel's automatic GitHub integration. Every push to the main bra
 A professional portfolio website showcasing projects, skills, publications, and contact information. Built with modern web technologies and optimized for performance (100/100 Lighthouse scores on desktop).
 
 **Key Features:**
+
 - Interactive particle background effects
 - Smooth animations and transitions
 - Filterable project showcase
@@ -31,6 +34,7 @@ A professional portfolio website showcasing projects, skills, publications, and 
 ## 🎨 Design Philosophy
 
 This portfolio was designed with a focus on:
+
 - **Modern Aesthetics** - Clean, minimal design with bold purple/cyan gradients
 - **User Experience** - Intuitive navigation with smooth scrolling and interactive elements
 - **Performance** - Optimized loading times without sacrificing visual appeal
@@ -41,6 +45,7 @@ This portfolio was designed with a focus on:
 ## 🛠️ Design & Development Tools
 
 ### Design Resources
+
 - **Color Palette**: Custom purple/cyan gradient theme for tech/GeoAI branding
 - **Typography**: Self-hosted Google Fonts
   - Playfair Display - Elegant serif for headings
@@ -51,6 +56,7 @@ This portfolio was designed with a focus on:
 - **Background Effects**: tsParticles for interactive particle system
 
 ### Development Stack
+
 - **Framework**: React 18.3 with functional components and hooks
 - **Build Tool**: Vite 7.3 for fast development and optimized builds
 - **Styling**: Vanilla CSS with CSS Variables for theming
@@ -67,12 +73,14 @@ This portfolio was designed with a focus on:
 ![CSS3](https://img.shields.io/badge/CSS3-Modern-1572B6?style=flat-square&logo=css3)
 
 **Core Technologies:**
+
 - React 18.3.1
 - Vite 7.3.1
 - JavaScript (ES6+)
 - CSS3 with modern features
 
 **Libraries:**
+
 - Framer Motion - Animations
 - tsParticles - Particle effects
 - Lottie React - Lottie animations
@@ -84,6 +92,7 @@ This portfolio was designed with a focus on:
 ## ⚡ Project Highlights
 
 ### Technical Achievements
+
 - ✅ **100/100 Lighthouse Performance** (Desktop)
 - ✅ **100/100 Accessibility Score**
 - ✅ **Self-Hosted Fonts** - Eliminated external CDN dependencies
@@ -91,6 +100,7 @@ This portfolio was designed with a focus on:
 - ✅ **Critical CSS Inlining** - Faster first contentful paint
 
 ### Portfolio Sections
+
 - **Hero** - Animated landing with particle effects
 - **About** - Professional summary with skills overview
 - **Projects** - Filterable project showcase with live links
@@ -102,6 +112,7 @@ This portfolio was designed with a focus on:
 ## 🚀 Getting Started
 
 ### Prerequisites
+
 - Node.js 18+ and npm
 - Git
 

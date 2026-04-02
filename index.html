@@ -1,33 +1,169 @@
+<!-- latest update -->
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
+
     <!-- Primary Meta Tags -->
     <title>Varshini - GeoAI Full Stack Developer</title>
     <meta name="title" content="Varshini - GeoAI Full Stack Developer" />
-    <meta name="description" content="GeoAI Full Stack Intern specializing in machine learning, data analysis, and full-stack development. Building intelligent, data-driven applications." />
-    <meta name="keywords" content="GeoAI, Full Stack Developer, Machine Learning, Data Analysis, Python, React, Portfolio" />
+    <meta
+      name="description"
+      content="GeoAI Full Stack Intern specializing in machine learning, data analysis, and full-stack development. Building intelligent, data-driven applications."
+    />
+    <meta
+      name="keywords"
+      content="GeoAI, Full Stack Developer, Machine Learning, Data Analysis, Python, React, Portfolio"
+    />
     <meta name="author" content="Varshini" />
     <meta name="theme-color" content="#050816" />
-    
+
     <!-- Performance Optimization: Preconnect to external domains -->
-    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
-    
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net" />
+
     <!-- Self-hosted fonts loaded via CSS imports - no external CDN needed -->
-    
+
     <!-- Critical CSS for above-the-fold content - Inline for fastest FCP -->
     <style>
-      :root{--primary:#915eff;--primary-dark:#804dee;--secondary:#aaa6c3;--bg-primary:#050816;--bg-secondary:#1d1836;--bg-tertiary:#151030;--text-primary:#ffffff;--text-secondary:#e0e7ff;--gradient:linear-gradient(90deg,#915eff,#22d3ee)}*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{font-family:'Poppins','Inter',system-ui,sans-serif;background:var(--bg-primary);color:var(--text-primary);line-height:1.6;overflow-x:hidden}#root{min-height:100vh}.gradient-text{background:var(--gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}.navbar{position:fixed;top:0;left:0;right:0;z-index:100;padding:1rem 0;background:rgba(5,8,22,.85);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.05);animation:slideDown .6s ease-out forwards}@keyframes slideDown{from{transform:translateY(-100%);opacity:0}to{transform:translateY(0);opacity:1}}.hero-section{position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:6rem 2rem 4rem;overflow:hidden;background:radial-gradient(circle at 10% 10%,rgba(145,94,255,.15) 0,transparent 40%),radial-gradient(circle at 90% 80%,rgba(34,211,238,.15) 0,transparent 40%);z-index:0}.hero-content{text-align:center;z-index:1;max-width:900px;padding-top:2rem}@keyframes fadeInUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}.hero-animate{opacity:0;animation:fadeInUp .8s ease-out forwards}.hero-name{font-family:'Playfair Display','Georgia',serif;font-size:clamp(3rem,9vw,6rem);font-weight:700;margin-bottom:1.5rem;margin-top:.5rem;letter-spacing:.01em;line-height:1.4;animation-delay:.2s}.btn{display:inline-block;padding:.9rem 2rem;border-radius:50px;font-weight:600;text-decoration:none;transition:all .3s;border:none;cursor:pointer;font-size:.95rem}.btn-primary{background:var(--gradient);color:var(--text-primary);box-shadow:0 4px 15px rgba(145,94,255,.4)}.btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 25px rgba(145,94,255,.6)}
+      :root {
+        --primary: #915eff;
+        --primary-dark: #804dee;
+        --secondary: #aaa6c3;
+        --bg-primary: #050816;
+        --bg-secondary: #1d1836;
+        --bg-tertiary: #151030;
+        --text-primary: #ffffff;
+        --text-secondary: #e0e7ff;
+        --gradient: linear-gradient(90deg, #915eff, #22d3ee);
+      }
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        font-family: "Poppins", "Inter", system-ui, sans-serif;
+        background: var(--bg-primary);
+        color: var(--text-primary);
+        line-height: 1.6;
+        overflow-x: hidden;
+      }
+      #root {
+        min-height: 100vh;
+      }
+      .gradient-text {
+        background: var(--gradient);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+      .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 100;
+        padding: 1rem 0;
+        background: rgba(5, 8, 22, 0.85);
+        backdrop-filter: blur(12px);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        animation: slideDown 0.6s ease-out forwards;
+      }
+      @keyframes slideDown {
+        from {
+          transform: translateY(-100%);
+          opacity: 0;
+        }
+        to {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+      .hero-section {
+        position: relative;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 6rem 2rem 4rem;
+        overflow: hidden;
+        background:
+          radial-gradient(
+            circle at 10% 10%,
+            rgba(145, 94, 255, 0.15) 0,
+            transparent 40%
+          ),
+          radial-gradient(
+            circle at 90% 80%,
+            rgba(34, 211, 238, 0.15) 0,
+            transparent 40%
+          );
+        z-index: 0;
+      }
+      .hero-content {
+        text-align: center;
+        z-index: 1;
+        max-width: 900px;
+        padding-top: 2rem;
+      }
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .hero-animate {
+        opacity: 0;
+        animation: fadeInUp 0.8s ease-out forwards;
+      }
+      .hero-name {
+        font-family: "Playfair Display", "Georgia", serif;
+        font-size: clamp(3rem, 9vw, 6rem);
+        font-weight: 700;
+        margin-bottom: 1.5rem;
+        margin-top: 0.5rem;
+        letter-spacing: 0.01em;
+        line-height: 1.4;
+        animation-delay: 0.2s;
+      }
+      .btn {
+        display: inline-block;
+        padding: 0.9rem 2rem;
+        border-radius: 50px;
+        font-weight: 600;
+        text-decoration: none;
+        transition: all 0.3s;
+        border: none;
+        cursor: pointer;
+        font-size: 0.95rem;
+      }
+      .btn-primary {
+        background: var(--gradient);
+        color: var(--text-primary);
+        box-shadow: 0 4px 15px rgba(145, 94, 255, 0.4);
+      }
+      .btn-primary:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(145, 94, 255, 0.6);
+      }
     </style>
   </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
-    
+
     <!-- Fonts now self-hosted via @fontsource packages - loaded in index.css -->
   </body>
 </html>
