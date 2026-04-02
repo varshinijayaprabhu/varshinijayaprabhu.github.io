@@ -1,3 +1,4 @@
+// Navbar.jsx
 import { useState } from "react";
 import { navLinks, personalInfo } from "../data";
 

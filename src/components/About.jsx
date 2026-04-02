@@ -1,3 +1,4 @@
+// About.jsx
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
@@ -20,8 +21,6 @@ export default function About() {
       </motion.div>
 
       <div className="about-content">
-
-
         <motion.div
           className="about-text"
           initial={{ opacity: 0, x: 50 }}

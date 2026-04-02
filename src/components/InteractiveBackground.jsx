@@ -1,45 +1,75 @@
+// InteractiveBackground.jsx
 import { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const codeChars = [
-  "0", "1", "0", "1", "0", "1",
-  "{", "}", "<", ">", "/", ";",
-  "=>", "( )", "[]", "&&", "||",
-  "if", "for", "let", "const",
-  "</>", "npm", "git", "AI",
+  "0",
+  "1",
+  "0",
+  "1",
+  "0",
+  "1",
+  "{",
+  "}",
+  "<",
+  ">",
+  "/",
+  ";",
+  "=>",
+  "( )",
+  "[]",
+  "&&",
+  "||",
+  "if",
+  "for",
+  "let",
+  "const",
+  "</>",
+  "npm",
+  "git",
+  "AI",
 ];
 
 const INTERACTIVE_SELECTORS = [
-  '.btn', '.btn-primary', '.btn-outline',
-  '.nav-links', '.navbar',
-  '.image-frame', '.profile-image',
-  '.skill-card', '.project-card',
-  '.contact-form', 'input', 'textarea', 'button',
-  'a', '.section-header'
+  ".btn",
+  ".btn-primary",
+  ".btn-outline",
+  ".nav-links",
+  ".navbar",
+  ".image-frame",
+  ".profile-image",
+  ".skill-card",
+  ".project-card",
+  ".contact-form",
+  "input",
+  "textarea",
+  "button",
+  "a",
+  ".section-header",
 ];
 
 function isOverInteractiveElement(x, y) {
   const element = document.elementFromPoint(x, y);
   if (!element) return false;
-  
-  return INTERACTIVE_SELECTORS.some(selector => 
-    element.closest(selector) !== null
+
+  return INTERACTIVE_SELECTORS.some(
+    (selector) => element.closest(selector) !== null,
   );
 }
 
 function CodeParticle({ x, y, id, char, onComplete }) {
   const randomX = (Math.random() - 0.5) * 100;
   const randomRotate = (Math.random() - 0.5) * 90;
-  
+
   return (
     <motion.div
       initial={{ x, y, scale: 1, opacity: 0.9, rotate: 0 }}
-      animate={{ 
+      animate={{
         scale: 0.3,
         opacity: 0,
         y: y - 80 - Math.random() * 50,
         x: x + randomX,
-        rotate: randomRotate
+        rotate: randomRotate,
       }}
       transition={{ duration: 1.2, ease: "easeOut" }}
       onAnimationComplete={() => onComplete(id)}
@@ -75,26 +105,28 @@ function MatrixRain() {
   }, []);
 
   return (
-    <div style={{
-      position: "fixed",
-      inset: 0,
-      overflow: "hidden",
-      pointerEvents: "none",
-      zIndex: 0,
-    }}>
-      {columns.map(col => (
+    <div
+      style={{
+        position: "fixed",
+        inset: 0,
+        overflow: "hidden",
+        pointerEvents: "none",
+        zIndex: 0,
+      }}
+    >
+      {columns.map((col) => (
         <motion.div
           key={col.id}
           initial={{ y: -200, opacity: 0 }}
-          animate={{ 
+          animate={{
             y: window.innerHeight + 200,
-            opacity: [0, 0.25, 0.25, 0]
+            opacity: [0, 0.25, 0.25, 0],
           }}
           transition={{
             duration: col.duration,
             delay: col.delay,
             repeat: Infinity,
-            ease: "linear"
+            ease: "linear",
           }}
           style={{
             position: "absolute",
@@ -109,8 +141,8 @@ function MatrixRain() {
             userSelect: "none",
           }}
         >
-          {Array.from({ length: 12 }, () => 
-            Math.random() > 0.5 ? "1" : "0"
+          {Array.from({ length: 12 }, () =>
+            Math.random() > 0.5 ? "1" : "0",
           ).join("")}
         </motion.div>
       ))}
@@ -131,7 +163,8 @@ function CursorGlow({ mousePos }) {
         width: "200px",
         height: "200px",
         borderRadius: "50%",
-        background: "radial-gradient(circle, rgba(145, 94, 255, 0.2) 0%, rgba(34, 211, 238, 0.1) 50%, transparent 70%)",
+        background:
+          "radial-gradient(circle, rgba(145, 94, 255, 0.2) 0%, rgba(34, 211, 238, 0.1) 50%, transparent 70%)",
         pointerEvents: "none",
         zIndex: 1,
       }}
@@ -149,38 +182,45 @@ export default function InteractiveBackground() {
     const checkMobile = () => {
       setIsMobile(window.innerWidth < 768);
     };
-    
+
     checkMobile();
-    window.addEventListener('resize', checkMobile);
-    
-    return () => window.removeEventListener('resize', checkMobile);
+    window.addEventListener("resize", checkMobile);
+
+    return () => window.removeEventListener("resize", checkMobile);
   }, []);
 
-  const handleMouseMove = useCallback((e) => {
-    if (isMobile) return; // Disable interactive effects on mobile
+  const handleMouseMove = useCallback(
+    (e) => {
+      if (isMobile) return; // Disable interactive effects on mobile
 
-    setMousePos({ x: e.clientX, y: e.clientY });
-    
-    // Don't spawn particles near interactive elements
-    if (isOverInteractiveElement(e.clientX, e.clientY)) {
-      return;
-    }
-    
-    // Reduced spawn rate
-    if (Math.random() > 0.9) {
-      const randomChar = codeChars[Math.floor(Math.random() * codeChars.length)];
-      setParticles(prev => [...prev, { 
-        id: particleId, 
-        x: e.clientX, 
-        y: e.clientY,
-        char: randomChar
-      }]);
-      setParticleId(prev => prev + 1);
-    }
-  }, [particleId, isMobile]);
+      setMousePos({ x: e.clientX, y: e.clientY });
+
+      // Don't spawn particles near interactive elements
+      if (isOverInteractiveElement(e.clientX, e.clientY)) {
+        return;
+      }
+
+      // Reduced spawn rate
+      if (Math.random() > 0.9) {
+        const randomChar =
+          codeChars[Math.floor(Math.random() * codeChars.length)];
+        setParticles((prev) => [
+          ...prev,
+          {
+            id: particleId,
+            x: e.clientX,
+            y: e.clientY,
+            char: randomChar,
+          },
+        ]);
+        setParticleId((prev) => prev + 1);
+      }
+    },
+    [particleId, isMobile],
+  );
 
   const removeParticle = useCallback((id) => {
-    setParticles(prev => prev.filter(p => p.id !== id));
+    setParticles((prev) => prev.filter((p) => p.id !== id));
   }, []);
 
   useEffect(() => {
@@ -191,13 +231,22 @@ export default function InteractiveBackground() {
 
   useEffect(() => {
     if (particles.length > 20) {
-      setParticles(prev => prev.slice(-20));
+      setParticles((prev) => prev.slice(-20));
     }
   }, [particles]);
 
   // Don't render heavy background effects on mobile
   if (isMobile) {
-    return <div style={{ position: 'fixed', inset: 0, background: 'var(--bg-primary)', zIndex: -1 }} />;
+    return (
+      <div
+        style={{
+          position: "fixed",
+          inset: 0,
+          background: "var(--bg-primary)",
+          zIndex: -1,
+        }}
+      />
+    );
   }
 
   return (
@@ -205,7 +254,7 @@ export default function InteractiveBackground() {
       <MatrixRain />
       <CursorGlow mousePos={mousePos} />
       <AnimatePresence>
-        {particles.map(particle => (
+        {particles.map((particle) => (
           <CodeParticle
             key={particle.id}
             id={particle.id}

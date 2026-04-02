@@ -1,18 +1,19 @@
+/* index.css */
 /* Self-hosted fonts for optimal performance */
-@import '@fontsource/poppins/400.css';
-@import '@fontsource/poppins/500.css';
-@import '@fontsource/poppins/600.css';
-@import '@fontsource/poppins/700.css';
-@import '@fontsource/poppins/800.css';
+@import "@fontsource/poppins/400.css";
+@import "@fontsource/poppins/500.css";
+@import "@fontsource/poppins/600.css";
+@import "@fontsource/poppins/700.css";
+@import "@fontsource/poppins/800.css";
 
-@import '@fontsource/playfair-display/700.css';
-@import '@fontsource/playfair-display/800.css';
+@import "@fontsource/playfair-display/700.css";
+@import "@fontsource/playfair-display/800.css";
 
-@import '@fontsource/outfit/400.css';
-@import '@fontsource/outfit/500.css';
-@import '@fontsource/outfit/600.css';
-@import '@fontsource/outfit/700.css';
-@import '@fontsource/outfit/800.css';
+@import "@fontsource/outfit/400.css";
+@import "@fontsource/outfit/500.css";
+@import "@fontsource/outfit/600.css";
+@import "@fontsource/outfit/700.css";
+@import "@fontsource/outfit/800.css";
 
 /* Design System */
 :root {
@@ -35,7 +36,9 @@
 }
 
 /* Reset & Base */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -46,7 +49,7 @@ html {
 }
 
 body {
-  font-family: 'Poppins', 'Inter', system-ui, sans-serif;
+  font-family: "Poppins", "Inter", system-ui, sans-serif;
   background: var(--bg-primary);
   color: var(--text-primary);
   line-height: 1.6;
@@ -124,7 +127,7 @@ body {
 }
 
 .nav-links a::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -4px;
   left: 0;
@@ -190,9 +193,17 @@ body {
   inset: 0;
   pointer-events: none;
   overflow: hidden;
-  background: 
-    radial-gradient(circle at 10% 10%, rgba(145, 94, 255, 0.15) 0%, transparent 40%),
-    radial-gradient(circle at 90% 80%, rgba(34, 211, 238, 0.15) 0%, transparent 40%);
+  background:
+    radial-gradient(
+      circle at 10% 10%,
+      rgba(145, 94, 255, 0.15) 0%,
+      transparent 40%
+    ),
+    radial-gradient(
+      circle at 90% 80%,
+      rgba(34, 211, 238, 0.15) 0%,
+      transparent 40%
+    );
   z-index: 0;
 }
 
@@ -234,7 +245,7 @@ body {
 }
 
 .hero-name {
-  font-family: 'Playfair Display', 'Georgia', serif;
+  font-family: "Playfair Display", "Georgia", serif;
   font-size: clamp(3rem, 9vw, 6rem);
   font-weight: 700;
   margin-bottom: 1.5rem;
@@ -312,8 +323,13 @@ body {
 }
 
 @keyframes gradientShift {
-  0%, 100% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
 }
 
 .btn-primary {
@@ -326,7 +342,7 @@ body {
 }
 
 .btn-primary::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -350,7 +366,7 @@ body {
 }
 
 .btn-outline::before {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
   background: var(--primary);
@@ -369,8 +385,13 @@ body {
 }
 
 @keyframes pulse {
-  0%, 100% { box-shadow: 0 0 0 0 rgba(145, 94, 255, 0.4); }
-  50% { box-shadow: 0 0 0 10px rgba(145, 94, 255, 0); }
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(145, 94, 255, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 10px rgba(145, 94, 255, 0);
+  }
 }
 
 @media (max-width: 768px) {
@@ -459,8 +480,12 @@ body {
 }
 
 @keyframes scrollFadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .scroll-bounce {
@@ -468,8 +493,13 @@ body {
 }
 
 @keyframes scrollBounce {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(10px); }
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
 }
 
 /* ========================================
@@ -517,8 +547,6 @@ section {
   margin: 0 auto;
   text-align: center;
 }
-
-
 
 .about-text p {
   color: var(--text-secondary);
@@ -569,7 +597,9 @@ section {
   background: rgba(255, 255, 255, 0.05);
   border-radius: 14px;
   padding: 0.8rem;
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
 }
 
 .skill-logo {
@@ -618,7 +648,12 @@ section {
   top: 0;
   bottom: 0;
   width: 3px;
-  background: linear-gradient(180deg, var(--primary), var(--secondary), var(--primary));
+  background: linear-gradient(
+    180deg,
+    var(--primary),
+    var(--secondary),
+    var(--primary)
+  );
   transform-origin: top;
   border-radius: 3px;
   box-shadow: 0 0 15px rgba(145, 94, 255, 0.5);
@@ -760,41 +795,41 @@ section {
   .timeline-line {
     left: 30px;
   }
-  
+
   .timeline-item {
     width: 100%;
     padding-left: 80px !important;
     padding-right: 0 !important;
     text-align: left !important;
   }
-  
-  .timeline-item.left, .timeline-item.right {
+
+  .timeline-item.left,
+  .timeline-item.right {
     left: 0;
   }
-  
+
   .timeline-item.left .timeline-node,
   .timeline-item.right .timeline-node {
     left: -25px; /* Relative to padding-left: 80px */
     right: auto;
   }
-  
+
   /* Fix node position for mobile */
   .timeline-item .timeline-node {
     left: 5px !important; /* Centers on line at 30px */
     right: auto !important;
   }
-  
+
   .timeline-item.left .project-tags,
   .timeline-item.left .project-links {
     justify-content: flex-start;
   }
-  
+
   .project-number {
     right: 1.5rem;
     left: auto;
   }
 }
-
 
 /* ========================================
    PUBLICATIONS SECTION
@@ -963,7 +998,9 @@ section {
   border: 2px solid var(--primary);
   border-radius: 50%;
   padding: 8px;
-  box-shadow: 0 0 20px rgba(145, 94, 255, 0.4), inset 0 0 10px rgba(145, 94, 255, 0.2);
+  box-shadow:
+    0 0 20px rgba(145, 94, 255, 0.4),
+    inset 0 0 10px rgba(145, 94, 255, 0.2);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -979,7 +1016,9 @@ section {
 
 .timeline-content:hover ~ .timeline-node .node-icon-wrapper {
   transform: scale(1.1);
-  box-shadow: 0 0 30px rgba(34, 211, 238, 0.6), inset 0 0 15px rgba(34, 211, 238, 0.3);
+  box-shadow:
+    0 0 30px rgba(34, 211, 238, 0.6),
+    inset 0 0 15px rgba(34, 211, 238, 0.3);
   border-color: var(--secondary);
 }
 

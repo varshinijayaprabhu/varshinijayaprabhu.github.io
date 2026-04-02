@@ -1,3 +1,4 @@
+// Publications.jsx
 import { motion } from "framer-motion";
 import { publications } from "../data";
 
@@ -29,29 +30,67 @@ export default function Publications() {
             >
               <h3 className="pub-title">{pub.title}</h3>
               <span className="pub-type">{pub.type}</span>
-              
+
               <p className="pub-abstract">{pub.abstract}</p>
 
               <div className="pub-footer">
                 <div className="pub-links">
                   {pub.links.github && (
-                    <a href={pub.links.github} target="_blank" rel="noopener noreferrer" className="pub-link" title="GitHub Repo" aria-label={`View ${pub.title} on GitHub`}>
-                      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="" className="pub-icon invert" loading="lazy" />
+                    <a
+                      href={pub.links.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="pub-link"
+                      title="GitHub Repo"
+                      aria-label={`View ${pub.title} on GitHub`}
+                    >
+                      <img
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
+                        alt=""
+                        className="pub-icon invert"
+                        loading="lazy"
+                      />
                     </a>
                   )}
                   {pub.links.demo && (
-                    <a href={pub.links.demo} target="_blank" rel="noopener noreferrer" className="pub-link" title="Live Demo" aria-label={`View ${pub.title} Demo`}>
-                      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/streamlit/streamlit-original.svg" alt="" className="pub-icon" loading="lazy" />
+                    <a
+                      href={pub.links.demo}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="pub-link"
+                      title="Live Demo"
+                      aria-label={`View ${pub.title} Demo`}
+                    >
+                      <img
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/streamlit/streamlit-original.svg"
+                        alt=""
+                        className="pub-icon"
+                        loading="lazy"
+                      />
                     </a>
                   )}
                   {pub.links.linkedin && (
-                    <a href={pub.links.linkedin} target="_blank" rel="noopener noreferrer" className="pub-link" title="View on LinkedIn" aria-label={`View ${pub.title} on LinkedIn`}>
-                      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="" className="pub-icon" loading="lazy" />
+                    <a
+                      href={pub.links.linkedin}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="pub-link"
+                      title="View on LinkedIn"
+                      aria-label={`View ${pub.title} on LinkedIn`}
+                    >
+                      <img
+                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg"
+                        alt=""
+                        className="pub-icon"
+                        loading="lazy"
+                      />
                     </a>
                   )}
                 </div>
-                
-                <span className={`pub-status status-${pub.status.toLowerCase().replace(/\s+/g, '-')}`}>
+
+                <span
+                  className={`pub-status status-${pub.status.toLowerCase().replace(/\s+/g, "-")}`}
+                >
                   {pub.status}
                 </span>
               </div>

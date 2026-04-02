@@ -1,3 +1,4 @@
+// Hero.jsx
 import { personalInfo } from "../data";
 
 export default function Hero() {
@@ -6,21 +7,15 @@ export default function Hero() {
       <div className="hero-shapes" />
 
       <div className="hero-content">
-        <p className="hero-greeting hero-animate">
-          Hello, I'm
-        </p>
+        <p className="hero-greeting hero-animate">Hello, I'm</p>
 
         <h1 className="hero-name hero-animate">
           <span className="gradient-text">{personalInfo.name}</span>
         </h1>
 
-        <h2 className="hero-role hero-animate">
-          {personalInfo.role}
-        </h2>
+        <h2 className="hero-role hero-animate">{personalInfo.role}</h2>
 
-        <p className="hero-tagline hero-animate">
-          {personalInfo.tagline}
-        </p>
+        <p className="hero-tagline hero-animate">{personalInfo.tagline}</p>
 
         <div className="hero-buttons">
           <a href="#about" className="btn btn-primary">

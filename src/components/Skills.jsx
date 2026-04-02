@@ -1,3 +1,4 @@
+// Skills.jsx
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
@@ -19,14 +20,14 @@ export default function Skills() {
   };
 
   const cardVariants = {
-    hidden: { 
-      opacity: 0, 
+    hidden: {
+      opacity: 0,
       y: 60,
       rotateX: -15,
-      scale: 0.9
+      scale: 0.9,
     },
-    visible: { 
-      opacity: 1, 
+    visible: {
+      opacity: 1,
       y: 0,
       rotateX: 0,
       scale: 1,
@@ -34,8 +35,8 @@ export default function Skills() {
         type: "spring",
         stiffness: 100,
         damping: 12,
-        duration: 0.6
-      }
+        duration: 0.6,
+      },
     },
   };
 
@@ -51,7 +52,7 @@ export default function Skills() {
         <h2 className="section-title">Skills & Technologies</h2>
       </motion.div>
 
-      <motion.div 
+      <motion.div
         className="skills-grid"
         variants={containerVariants}
         initial="hidden"
@@ -62,18 +63,18 @@ export default function Skills() {
             key={skill.name}
             className="skill-card"
             variants={cardVariants}
-            whileHover={{ 
+            whileHover={{
               y: -10,
               scale: 1.05,
               boxShadow: "0 20px 40px rgba(145, 94, 255, 0.2)",
               borderColor: "rgba(145, 94, 255, 0.5)",
-              transition: { duration: 0.2 }
+              transition: { duration: 0.2 },
             }}
           >
             <div className="skill-icon-wrapper">
-              <img 
-                src={skill.icon} 
-                alt={skill.name} 
+              <img
+                src={skill.icon}
+                alt={skill.name}
                 className="skill-logo"
                 loading="lazy"
               />

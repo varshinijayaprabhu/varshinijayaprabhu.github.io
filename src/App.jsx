@@ -1,10 +1,13 @@
+// App.jsx
 import { Suspense, lazy } from "react";
 import "./index.css";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 
 // Lazy load background and below-the-fold components
-const InteractiveBackground = lazy(() => import("./components/InteractiveBackground"));
+const InteractiveBackground = lazy(
+  () => import("./components/InteractiveBackground"),
+);
 const About = lazy(() => import("./components/About"));
 const Skills = lazy(() => import("./components/Skills"));
 const Projects = lazy(() => import("./components/Projects"));
@@ -21,7 +24,7 @@ export default function App() {
       <Navbar />
       <main>
         <Hero />
-        <Suspense fallback={<div style={{ height: '50vh' }} />}>
+        <Suspense fallback={<div style={{ height: "50vh" }} />}>
           <About />
           <Skills />
           <Projects />
