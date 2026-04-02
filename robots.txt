@@ -1,0 +1,4 @@
+# Portfolio with 100/100 Lighthouse scores
+User-agent: *
+Allow: /
+Sitemap: https://varshinijayaprabhu.com/sitemap.xml
