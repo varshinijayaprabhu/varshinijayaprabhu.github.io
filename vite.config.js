@@ -1,26 +1,25 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
 
 export default defineConfig({
-  plugins: [
-    react(),
-  ],
+  base: "/portfolio/",
+  plugins: [react()],
   build: {
-    target: 'esnext',
-    minify: 'esbuild',
+    target: "esnext",
+    minify: "esbuild",
     cssMinify: true,
     chunkSizeWarningLimit: 500,
     rollupOptions: {
       output: {
         manualChunks: {
-          'react-core': ['react', 'react-dom'],
-          'animation': ['framer-motion'],
-          'particles': ['tsparticles', 'react-tsparticles'],
-          'lottie': ['lottie-react'],
+          "react-core": ["react", "react-dom"],
+          animation: ["framer-motion"],
+          particles: ["tsparticles", "react-tsparticles"],
+          lottie: ["lottie-react"],
         },
-        chunkFileNames: 'assets/js/[name]-[hash].js',
-        entryFileNames: 'assets/js/[name]-[hash].js',
-        assetFileNames: 'assets/[ext]/[name]-[hash].[ext]',
+        chunkFileNames: "assets/js/[name]-[hash].js",
+        entryFileNames: "assets/js/[name]-[hash].js",
+        assetFileNames: "assets/[ext]/[name]-[hash].[ext]",
       },
     },
   },
@@ -29,4 +28,4 @@ export default defineConfig({
       overlay: false,
     },
   },
-})
+});
