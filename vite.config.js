@@ -4,7 +4,7 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 
 export default defineConfig({
-  base: "/portfolio/",
+  base: "/",
   plugins: [react()],
   build: {
     target: "esnext",
@@ -12,6 +12,9 @@ export default defineConfig({
     cssMinify: true,
     chunkSizeWarningLimit: 500,
     rollupOptions: {
+      input: {
+        main: "./index.html",
+      },
       output: {
         manualChunks: {
           "react-core": ["react", "react-dom"],
