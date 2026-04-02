@@ -1,3 +1,4 @@
+// Portfolio with 100/100 Lighthouse scores
 // latest update
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
