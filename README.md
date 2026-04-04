@@ -1,111 +1,101 @@
-<!-- latest update -->
+# Portfolio — Varshini J
 
-# Portfolio - Varshini Jayaprabhu
-
-Modern, high-performance portfolio website for a Full Stack Developer built with React and Vite.
+Modern, high-performance personal portfolio website built with React and Vite, showcasing my skills, projects, publications, experience, education, and certifications.
 
 ---
 
-## 🌐 Deployment
+## 🌐 Live Site
 
-**Platform**: Vercel  
-**Live URL**: [portfolio-seven-eta-19.vercel.app](portfolio-seven-eta-19.vercel.app)  
+**Platform**: GitHub Pages
+**Live URL**: [varshinijayaprabhu.github.io](https://varshinijayaprabhu.github.io)
 **Status**: ✅ Active
-
-Deployed using Vercel's automatic GitHub integration. Every push to the main branch triggers a new deployment.
 
 ---
 
 ## 📋 Project Overview
 
-A professional portfolio website showcasing projects, skills, publications, and contact information. Built with modern web technologies and optimized for performance (100/100 Lighthouse scores on desktop).
+A professional portfolio website designed to showcase my journey as a Machine Learning & Full Stack Developer. Built with modern web technologies and optimized for performance.
 
 **Key Features:**
 
-- Interactive particle background effects
-- Smooth animations and transitions
-- Filterable project showcase
-- Functional contact form
-- Fully responsive design
-- WCAG accessibility compliant
+- 🎨 Interactive animated background with particle effects
+- ⚡ Smooth framer-motion animations and micro-interactions
+- 🗂️ Filterable project showcase with live links
+- 📜 Publications & research section
+- 🏢 Work experience timeline
+- 🎓 Education section with institution cards
+- 🏆 Certifications carousel slideshow
+- 📬 Functional contact form
+- 📱 Fully responsive design
 
 ---
 
-## 🎨 Design Philosophy
+## 🗂️ Portfolio Sections
 
-This portfolio was designed with a focus on:
-
-- **Modern Aesthetics** - Clean, minimal design with bold purple/cyan gradients
-- **User Experience** - Intuitive navigation with smooth scrolling and interactive elements
-- **Performance** - Optimized loading times without sacrificing visual appeal
-- **Accessibility** - Ensuring everyone can access and navigate the portfolio
+| Section | Description |
+|---|---|
+| **Hero** | Animated landing with name, tagline, and CTA buttons |
+| **About** | Professional summary and background |
+| **Skills** | Tech stack displayed in a categorized icon grid |
+| **Projects** | Filterable cards with GitHub/live links |
+| **Publications** | Research papers and technical publications |
+| **Education** | Academic background — School, BCA, MCA |
+| **Experience** | Internship and work timeline |
+| **Certifications** | Slideshow carousel of all certifications |
+| **Contact** | Email contact form |
 
 ---
 
-## 🛠️ Design & Development Tools
+## 🎓 Education
 
-### Design Resources
-
-- **Color Palette**: Custom purple/cyan gradient theme for tech/branding
-- **Typography**: Self-hosted Google Fonts
-  - Playfair Display - Elegant serif for headings
-  - Poppins - Clean sans-serif for body text
-  - Outfit - Modern UI elements
-- **Icons**: React Icons library
-- **Animations**: Framer Motion for smooth, physics-based animations
-- **Background Effects**: tsParticles for interactive particle system
-
-### Development Stack
-
-- **Framework**: React 18.3 with functional components and hooks
-- **Build Tool**: Vite 7.3 for fast development and optimized builds
-- **Styling**: Vanilla CSS with CSS Variables for theming
-- **Version Control**: Git & GitHub
-- **Deployment**: Vercel
+| Institution | Qualification | Year |
+|---|---|---|
+| CMR Institute of Technology (CMRIT) | MCA — Masters of Computer Application | 2024–2026 (Ongoing) |
+| Krupanidhi Degree College | BCA — Bachelor of Computer Application (CGPA: 9.15) | 2021–2024 |
+| Ujjval Vidyalaya School & Composite PU College | Schooling & Pre-University | 2019 / 2021 |
 
 ---
 
 ## 🛠️ Tech Stack
 
-![React](https://img.shields.io/badge/React-18.3.1-61DAFB?style=flat-square&logo=react)
-![Vite](https://img.shields.io/badge/Vite-7.3.1-646CFF?style=flat-square&logo=vite)
+![React](https://img.shields.io/badge/React-19-61DAFB?style=flat-square&logo=react)
+![Vite](https://img.shields.io/badge/Vite-7-646CFF?style=flat-square&logo=vite)
 ![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?style=flat-square&logo=javascript)
-![CSS3](https://img.shields.io/badge/CSS3-Modern-1572B6?style=flat-square&logo=css3)
+![CSS3](https://img.shields.io/badge/CSS3-Vanilla-1572B6?style=flat-square&logo=css3)
+![GitHub Pages](https://img.shields.io/badge/Deployed-GitHub%20Pages-222?style=flat-square&logo=github)
 
-**Core Technologies:**
-
-- React 18.3.1
-- Vite 7.3.1
-- JavaScript (ES6+)
-- CSS3 with modern features
+**Core:**
+- React 19
+- Vite 7
+- Vanilla CSS with CSS Variables
 
 **Libraries:**
-
-- Framer Motion - Animations
-- tsParticles - Particle effects
-- Lottie React - Lottie animations
-- EmailJS - Contact form integration
-- React Icons - Icon library
+- Framer Motion — Animations
+- tsParticles — Interactive background
+- Lottie React — Lottie animations
+- `@fontsource` — Self-hosted fonts (Poppins, Playfair Display, Outfit)
 
 ---
 
-## ⚡ Project Highlights
+## 🎨 Design System
 
-### Technical Achievements
+- **Color Palette**: Purple (`#915EFF`) + Cyan (`#22D3EE`) gradient
+- **Typography**:
+  - *Playfair Display* — Serif headings
+  - *Poppins* — Body & UI text
+  - *Outfit* — Labels & metadata
+- **Theme**: Dark mode with glassmorphism-style cards
+- **Animations**: Physics-based spring animations via Framer Motion
 
-- ✅ **100/100 Lighthouse Performance** (Desktop)
-- ✅ **100/100 Accessibility Score**
-- ✅ **Self-Hosted Fonts** - Eliminated external CDN dependencies
-- ✅ **Code Splitting** - Separate bundles for React, animations, and effects
-- ✅ **Critical CSS Inlining** - Faster first contentful paint
+---
 
-### Portfolio Sections
+## ⚡ Performance
 
-- **Hero** - Animated landing with particle effects
-- **About** - Professional summary with skills overview
-- **Projects** - Filterable project showcase with live links
-- **Publications** - Research papers and technical writing
-- **Contact** - Functional contact form powered by EmailJS
+- ✅ Self-hosted fonts — no external CDN round-trips
+- ✅ Code splitting — separate bundles for React, animations, and particles
+- ✅ Critical CSS inlined in `index.html` for fast FCP
+- ✅ Lazy-loaded below-the-fold components
+- ✅ Optimized production build via Vite + esbuild
 
 ---
 
@@ -120,57 +110,73 @@ This portfolio was designed with a focus on:
 
 ```bash
 # Clone the repository
-git clone https://github.com/varshinijayaprabhu/portfolio.git
-cd portfolio
+git clone https://github.com/varshinijayaprabhu/varshinijayaprabhu.github.io.git
+cd varshinijayaprabhu.github.io
 
 # Install dependencies
 npm install
 
-# Start development server
+# Start the development server
 npm run dev
 ```
 
 Open [http://localhost:5173](http://localhost:5173) in your browser.
 
-### Build Commands
+### Build & Deploy
 
 ```bash
-# Create production build
+# Build the production bundle
 npm run build
 
-# Preview production build
-npm run preview
+# Deploy to GitHub Pages (pushes dist/ to main branch)
+npx gh-pages -d dist -b main
 ```
 
----
-
-## 📄 Documentation
-
-- **[PROCESS.md](./PROCESS.md)** - Development process, architecture decisions, AI usage, and challenges faced
+> **Note:** Since this is a GitHub user site (`username.github.io`), GitHub Pages serves from the root of the `main` branch. The deploy command above pushes the compiled `dist/` folder directly to `main`.
 
 ---
 
-## 🤝 Contributing
+## 📁 Project Structure
 
-Contributions are welcome! Feel free to submit issues or pull requests.
+```
+portfolio/
+├── public/             # Static assets (certificate images, institution logos)
+├── src/
+│   ├── components/
+│   │   ├── About.jsx
+│   │   ├── Certifications.jsx
+│   │   ├── Contact.jsx
+│   │   ├── Education.jsx
+│   │   ├── Experience.jsx
+│   │   ├── Footer.jsx
+│   │   ├── Hero.jsx
+│   │   ├── InteractiveBackground.jsx
+│   │   ├── Navbar.jsx
+│   │   ├── Projects.jsx
+│   │   ├── Publications.jsx
+│   │   └── Skills.jsx
+│   ├── App.jsx         # Root component with section layout
+│   ├── data.js         # Single source of truth for all content
+│   ├── index.css       # Global styles & design system
+│   └── main.jsx        # App entry point
+├── index.html          # HTML shell with critical CSS
+├── vite.config.js      # Vite build configuration
+└── package.json
+```
 
-1. Fork the project
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+> ✏️ **To update content** (projects, certifications, education, etc.), edit `src/data.js` — no component changes needed.
 
 ---
 
 ## 👤 Author
 
-**Varshini Jayaprabhu**
+**Varshini J**
 
-- 🌐 Portfolio: [portfolio-seven-eta-19.vercel.app](portfolio-seven-eta-19.vercel.app)
+- 🌐 Portfolio: [varshinijayaprabhu.github.io](https://varshinijayaprabhu.github.io)
 - 📧 Email: varshini.j.512004@gmail.com
 - 💼 GitHub: [@varshinijayaprabhu](https://github.com/varshinijayaprabhu)
-- 🔗 LinkedIn: [Varshini Jayaprabhu](https://www.linkedin.com/in/varshini-jayaprabhu)
+- 🔗 LinkedIn: [varshinij2004](https://www.linkedin.com/in/varshinij2004/)
 
 ---
 
-**Made with React + Vite**
+**Made with React + Vite · Deployed on GitHub Pages**
