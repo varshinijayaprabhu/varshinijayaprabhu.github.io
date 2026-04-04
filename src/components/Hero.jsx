@@ -13,8 +13,6 @@ export default function Hero() {
           <span className="gradient-text">{personalInfo.name}</span>
         </h1>
 
-        <h2 className="hero-role hero-animate">{personalInfo.role}</h2>
-
         <p className="hero-tagline hero-animate">{personalInfo.tagline}</p>
 
         <div className="hero-buttons">

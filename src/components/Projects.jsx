@@ -135,34 +135,35 @@ export default function Projects() {
                   </a>
                 )}
                 {project.demo && project.demo !== "#" && (
-                  <>
-                    <a
-                      href={project.demo}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="project-link"
-                      title="View Demo"
-                      aria-label={`View ${project.title} Live Demo`}
-                    >
-                      <img
-                        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/streamlit/streamlit-original.svg"
-                        alt=""
-                        style={{ width: "28px", height: "28px" }}
-                        loading="lazy"
-                      />
-                    </a>
-                    <span
+                  <a
+                    href={project.demo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="project-link"
+                    title="View Demo"
+                    aria-label={`View ${project.title} Live Demo`}
+                  >
+                    <img
+                      src={
+                        project.demo.includes("streamlit.app")
+                          ? "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/streamlit/streamlit-original.svg"
+                          : project.demo.includes("onrender.com")
+                            ? "https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/render.svg"
+                            : project.demo.includes("hf.space")
+                              ? "https://huggingface.co/front/assets/huggingface_logo-noborder.svg"
+                              : "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/chrome/chrome-original.svg"
+                      }
+                      alt=""
                       style={{
-                        fontSize: "0.9rem",
-                        fontWeight: "500",
-                        color: "#915eff",
-                        display: "flex",
-                        alignItems: "center",
+                        width: "28px",
+                        height: "28px",
+                        filter: project.demo.includes("onrender.com")
+                          ? "invert(1)"
+                          : "none",
                       }}
-                    >
-                      Deployed
-                    </span>
-                  </>
+                      loading="lazy"
+                    />
+                  </a>
                 )}
                 {project.status === "Ongoing" && (
                   <>
@@ -279,49 +280,36 @@ export default function Projects() {
                   </>
                 )}
                 {project.status === "Internship" && (
-                  <>
-                    <div
-                      className="project-link"
-                      title="Internship Project"
-                      style={{
-                        cursor: "default",
-                        background: "rgba(50, 205, 50, 0.15)",
-                        borderColor: "rgba(50, 205, 50, 0.3)",
-                      }}
+                  <div
+                    className="project-link"
+                    title="Internship Project"
+                    style={{
+                      cursor: "default",
+                      background: "rgba(50, 205, 50, 0.15)",
+                      borderColor: "rgba(50, 205, 50, 0.3)",
+                    }}
+                  >
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="#32cd32"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
                     >
-                      <svg
-                        width="24"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="#32cd32"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      >
-                        <rect
-                          x="2"
-                          y="7"
-                          width="20"
-                          height="14"
-                          rx="2"
-                          ry="2"
-                        ></rect>
-                        <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
-                      </svg>
-                    </div>
-                    <span
-                      style={{
-                        fontSize: "0.9rem",
-                        fontWeight: "500",
-                        color: "#32cd32",
-                        display: "flex",
-                        alignItems: "center",
-                      }}
-                    >
-                      Internship Project
-                    </span>
-                  </>
+                      <rect
+                        x="2"
+                        y="7"
+                        width="20"
+                        height="14"
+                        rx="2"
+                        ry="2"
+                      ></rect>
+                      <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                    </svg>
+                  </div>
                 )}
               </div>
             </motion.div>

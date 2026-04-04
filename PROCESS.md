@@ -95,10 +95,10 @@ I used Google's Gemini AI (Antigravity) throughout the development process for c
 **Example Prompt 1** (Initial Setup):
 
 ```
-Create a modern, professional portfolio website for a GeoAI Full Stack Developer
+Create a modern, professional portfolio website for a Full Stack Developer
 using React and Vite. The portfolio should include:
 - Hero section with animated introduction
-- About section highlighting GeoAI expertise
+- About section highlighting expertise
 - Skills section with technical competencies
 - Projects showcase with filtering
 - Publications section for research papers

@@ -2,7 +2,7 @@
 
 # Portfolio - Varshini Jayaprabhu
 
-Modern, high-performance portfolio website for a GeoAI Full Stack Developer built with React and Vite.
+Modern, high-performance portfolio website for a Full Stack Developer built with React and Vite.
 
 ---
 
@@ -46,7 +46,7 @@ This portfolio was designed with a focus on:
 
 ### Design Resources
 
-- **Color Palette**: Custom purple/cyan gradient theme for tech/GeoAI branding
+- **Color Palette**: Custom purple/cyan gradient theme for tech/branding
 - **Typography**: Self-hosted Google Fonts
   - Playfair Display - Elegant serif for headings
   - Poppins - Clean sans-serif for body text
