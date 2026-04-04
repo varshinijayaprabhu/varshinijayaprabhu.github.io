@@ -91,9 +91,9 @@ export const skills = [
     icon: "https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/render.svg",
   },
   {
-    name: "Vercel",
-    category: "Deployment",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vercel/vercel-original.svg",
+    name: "PostgreSQL",
+    category: "Database",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
   },
   {
     name: "GitHub Pages",
