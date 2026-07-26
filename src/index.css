@@ -96,7 +96,7 @@ body {
 }
 
 .nav-container {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 0 2rem;
   display: flex;
@@ -110,11 +110,13 @@ body {
   color: var(--text-primary);
   text-decoration: none;
   letter-spacing: -0.02em;
+  white-space: nowrap;
 }
 
 .nav-links {
   display: flex;
-  gap: 2.5rem;
+  gap: 1.25rem;
+  align-items: center;
 }
 
 .nav-links a {
@@ -143,6 +145,27 @@ body {
 
 .nav-links a:hover::after {
   width: 100%;
+}
+
+.nav-resume-btn {
+  background: var(--gradient);
+  color: white !important;
+  padding: 0.5rem 1.5rem !important;
+  border-radius: 50px;
+  font-weight: 600 !important;
+  box-shadow: 0 4px 15px rgba(145, 94, 255, 0.3);
+  margin-left: 0.5rem;
+  transition: all 0.3s !important;
+}
+
+.nav-resume-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(145, 94, 255, 0.5);
+  color: white !important;
+}
+
+.nav-resume-btn::after {
+  display: none !important;
 }
 
 .nav-toggle {
@@ -1671,8 +1694,165 @@ section {
 }
 
 /* ========================================
-   RESPONSIVE DESIGN
+   DEGREES SUBSECTION
    ======================================== */
+.degrees-container {
+  margin-top: 4rem;
+  width: 100%;
+  max-width: 1500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.degrees-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: white;
+  text-align: center;
+  margin-bottom: 2.5rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+}
+
+.degrees-title::before,
+.degrees-title::after {
+  content: "";
+  height: 2px;
+  width: 80px;
+  background: linear-gradient(90deg, transparent, var(--primary));
+}
+
+.degrees-title::after {
+  background: linear-gradient(90deg, var(--primary), transparent);
+}
+
+.degrees-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.degree-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+}
+
+.degree-card:hover {
+  border-color: rgba(145, 94, 255, 0.4);
+  box-shadow: 0 12px 35px rgba(145, 94, 255, 0.15);
+}
+
+.degree-img-wrap {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.degree-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 0.5rem;
+  transition: transform 0.35s ease;
+}
+
+.degree-img-wrap:hover .degree-img {
+  transform: scale(1.03);
+}
+
+.degree-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(5, 8, 22, 0.75);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  opacity: 0;
+  transition: opacity 0.3s;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: white;
+  letter-spacing: 0.03em;
+}
+
+.degree-img-wrap:hover .degree-overlay {
+  opacity: 1;
+}
+
+.degree-info {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex-grow: 1;
+}
+
+.degree-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.2rem;
+}
+
+.degree-name {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #915eff;
+}
+
+.degree-badge {
+  background: linear-gradient(135deg, rgba(145, 94, 255, 0.25), rgba(34, 211, 238, 0.25));
+  border: 1px solid rgba(145, 94, 255, 0.4);
+  color: white;
+  font-weight: 700;
+  font-size: 0.88rem;
+  padding: 0.3rem 0.85rem;
+  border-radius: 20px;
+}
+
+.degree-title-full {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: white;
+}
+
+.degree-college,
+.degree-univ {
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+  line-height: 1.4;
+}
+
+.degree-duration {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-top: 0.4rem;
+}
+
+@media (max-width: 850px) {
+  .degrees-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
 @media (max-width: 992px) {
   .education-grid {
     grid-template-columns: 1fr;

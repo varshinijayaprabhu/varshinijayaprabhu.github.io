@@ -24,6 +24,15 @@ export default function Navbar() {
               {link.title}
             </a>
           ))}
+          <a
+            href={personalInfo.resume}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => setIsOpen(false)}
+            className="nav-resume-btn"
+          >
+            Resume
+          </a>
         </div>
 
         <button

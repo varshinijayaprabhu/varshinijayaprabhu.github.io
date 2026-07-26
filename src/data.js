@@ -5,6 +5,8 @@ export const personalInfo = {
   email: "varshini.j.512004@gmail.com",
   github: "https://github.com/varshinijayaprabhu",
   linkedin: "https://www.linkedin.com/in/varshinij2004/",
+  resume:
+    "https://drive.google.com/file/d/1FWzj9jQXXP9jMjbxO_8TPxql-dbaj30l/view?usp=sharing",
 };
 
 export const aboutText = [
@@ -13,6 +15,9 @@ export const aboutText = [
   "I enjoy solving complex problems by combining analytical thinking with well-structured backend and application logic.",
   "I am motivated by building reliable, impactful systems that transform data into meaningful insights.",
 ];
+
+const createSvgDataUrl = (svg) =>
+  `data:image/svg+xml;utf8,${encodeURIComponent(svg)}`;
 
 export const skills = [
   {
@@ -94,6 +99,32 @@ export const skills = [
     name: "PostgreSQL",
     category: "Database",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
+  },
+  {
+    name: "Microsoft Fabric",
+    category: "Cloud & Data",
+    icon: createSvgDataUrl(
+      '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>Microsoft Fabric</title><rect x="2" y="2" width="8" height="8" rx="2" fill="#F25022"/><rect x="12" y="2" width="10" height="8" rx="2" fill="#7FBA00"/><rect x="2" y="12" width="8" height="10" rx="2" fill="#00A4EF"/><rect x="12" y="12" width="10" height="10" rx="2" fill="#FFB900"/></svg>',
+    ),
+  },
+  {
+    name: "Azure",
+    category: "Cloud & Data",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg",
+  },
+  {
+    name: "Synapse",
+    category: "Cloud & Data",
+    icon: createSvgDataUrl(
+      '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>Synapse</title><path fill="#0078D4" d="M12 2 3 8v8l9 6 9-6V8zm0 2.4 6.9 4.6v4L12 17.6 5.1 13v-4z"/><path fill="#FFFFFF" d="M7.5 12h9v1.5h-9zM11.25 8.5h1.5v7h-1.5z"/></svg>',
+    ),
+  },
+  {
+    name: "Power BI",
+    category: "Analytics",
+    icon: createSvgDataUrl(
+      '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>Power BI</title><rect x="3" y="11" width="4" height="9" rx="1" fill="#F2C811"/><rect x="9" y="8" width="4" height="12" rx="1" fill="#F2C811"/><rect x="15" y="5" width="4" height="15" rx="1" fill="#F2C811"/><path fill="#8A6D00" d="M3 20h18v1H3z"/></svg>',
+    ),
   },
   {
     name: "GitHub Pages",
@@ -298,6 +329,22 @@ export const publications = [
 
 export const experiences = [
   {
+    company: "Bandhan Technologies, Bengaluru",
+    role: "Software Development Intern",
+    duration: "April 2026 – Present",
+    description:
+      "As a Software Development Intern in the Microsoft Practice team, I contribute to enterprise cloud modernization and application development projects using Microsoft Azure, Azure Synapse Analytics, and Microsoft Fabric. I work on full-stack web applications, data engineering, and cloud migration solutions by developing scalable applications with React.js, Node.js, Express.js, PostgreSQL, and REST APIs. My experience includes implementing data ingestion and analytics workflows, supporting migration assessments, and working with modern data architectures, semantic models, and business intelligence solutions while collaborating in an Agile development environment.",
+    icon: "💻",
+  },
+  {
+    company: "Gesix Solutions Private Limited",
+    role: "Full Stack Intern",
+    duration: "February 2026 - May 2026",
+    description:
+      "Currently leading the 'Data Quality and Trustability' project team, where I architect and develop scalable full-stack solutions to ensure organizational data integrity. My role involves managing the complete development lifecycle, from high-performance React frontends to robust Flask backends. I lead a team of developers to implement automated data validation frameworks and real-time remediation systems, focusing on building high-trust data architectures that meet modern enterprise standards for reliability and compliance.",
+    icon: "🚀",
+  },
+  {
     company: "Prinston Smart Engineers",
     role: "Machine Learning Intern",
     duration: "May 2024 - June 2024",
@@ -305,22 +352,26 @@ export const experiences = [
       "During this intensive machine learning internship, I was trained on end-to-end ML methodologies, from data collection and preprocessing to model deployment. I was assigned the 'Carbon Pulse' problem statement, where I developed a robust CO₂ emission prediction platform. This project involved extensive exploratory data analysis (EDA), feature engineering on engine and fuel consumption datasets, and the implementation of regression algorithms to achieve high prediction accuracy. The experience culminated in the successful integration of the ML model into a functional web application, showcasing the practical application of AI in environmental analytics.",
     icon: "💼",
   },
-  {
-    company: "Gesix Solutions Private Limited",
-    role: "Full Stack Intern",
-    duration: "February 2026 - Ongoing",
-    description:
-      "Currently leading the 'Data Quality and Trustability' project team, where I architect and develop scalable full-stack solutions to ensure organizational data integrity. My role involves managing the complete development lifecycle, from high-performance React frontends to robust Flask backends. I lead a team of developers to implement automated data validation frameworks and real-time remediation systems, focusing on building high-trust data architectures that meet modern enterprise standards for reliability and compliance.",
-    icon: "🚀",
-  },
 ];
 
 export const certifications = [
-
+  {
+    title: "Certificate of Internship",
+    issuer: "Gesix Solutions Private Limited",
+    fullName: "GESIX Full Stack Development Internship Completion",
+    description:
+      "Awarded for successfully completing the Full Stack Internship at Gesix Solutions Private Limited, leading key initiatives in full-stack architecture, real-time remediation systems, and data quality frameworks.",
+    date: "2026",
+    type: "Internship",
+    icon: "🎓",
+    color: "#00d2ff",
+    image: "/GESIX Internship completion certificate.jpg",
+  },
   {
     title: "Certificate of Publication",
     issuer: "IJARETY",
-    fullName: "International Journal of Advanced Research in Education & Technology",
+    fullName:
+      "International Journal of Advanced Research in Education & Technology",
     description:
       'Awarded for the publication of the paper "AQI-Insight: Hyperlocal Air Pollution Monitoring and Advisory System" in IJARETY, Volume 13, Issue 2, March-April 2026. IJARETY is a bi-monthly, peer-reviewed, multidisciplinary, scholarly indexed open access journal with an Impact Factor of 8.152.',
     date: "March 2026",
@@ -505,8 +556,8 @@ export const education = [
   {
     institution: "CMR Institute of Technology (CMRIT)",
     degree: "Masters of Computer Application (MCA)",
-    duration: "2024 - 2026 (Ongoing)",
-    grade: "Current CGPA: 9.15",
+    duration: "2024 - 2026",
+    grade: "Current CGPA: 9.36",
     image: "/CMRIT.jpeg",
     icon: "🎓",
   },
@@ -514,7 +565,7 @@ export const education = [
     institution: "Krupanidhi Degree College",
     degree: "Bachelor of Computer Application (BCA)",
     duration: "2021 - 2024",
-    grade: "CGPA: 9.15",
+    grade: "CGPA: 9.16",
     image: "/KRUPANIDHI.jpeg",
     icon: "🎓",
   },
@@ -525,6 +576,27 @@ export const education = [
     grade: "Passed out School - 2019\nPassed out PU - 2021",
     image: "/UJJVAL.jpeg",
     icon: "🏫",
+  },
+];
+
+export const degrees = [
+  {
+    title: "Master of Computer Applications",
+    degree: "MCA DEGREE",
+    institution: "CMR Institute of Technology (CMRIT)",
+    university: "Visvesvaraya Technological University (VTU)",
+    duration: "2024 - 2026",
+    cgpa: "9.36",
+    image: "/MCA DEGREE.jpg",
+  },
+  {
+    title: "Bachelor of Computer Applications",
+    degree: "BCA DEGREE",
+    institution: "Krupanidhi Degree College",
+    university: "Bengaluru North University (BNU)",
+    duration: "2021 - 2024",
+    cgpa: "9.16",
+    image: "/BCA DEGREE.jpg",
   },
 ];
 
